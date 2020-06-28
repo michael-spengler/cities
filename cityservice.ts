@@ -1,5 +1,9 @@
+// import { cities } from './cities.ts'
 import { DistanceCalculator } from "https://deno.land/x/distancecalculator/distance-calculator.ts"
-import { cities } from './cities.ts'
+import { cities } from 'https://raw.githubusercontent.com/michael-spengler/cities/master/cities.ts'
+// import { cities } from 'https://deno.land/x/cities/cities.ts'
+
+
 export class CityService {
 
     public static getCityInfo(countryCode: string, cityName: string): any {

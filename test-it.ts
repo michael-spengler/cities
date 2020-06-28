@@ -1,6 +1,5 @@
-import { CityService } from "./cityservice.ts"
-// import { CityService } from "https://raw.githubusercontent.com/michael-spengler/cities/master/cityservice.ts"
-// import { CityService } from "https://deno.land/x/food/cityservice.ts"
+import { CityService } from "https://raw.githubusercontent.com/michael-spengler/cities/master/cityservice.ts"
+// import { CityService } from "https://deno.land/x/cities/cityservice.ts"
 
 const cityName = 'Heidelberg'
 const countryCode = 'DE'
