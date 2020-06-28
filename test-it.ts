@@ -1,7 +1,6 @@
 import { CityService } from "https://raw.githubusercontent.com/michael-spengler/cities/master/cityservice.ts"
-import { ICityInfo } from "https://raw.githubusercontent.com/michael-spengler/cities/master/interfaces.ts"
+import { ICityInfo } from "./interfaces"
 // import { CityService } from "https://deno.land/x/cities/cityservice.ts"
-// import { ICityInfo } from "https://deno.land/x/cities/interfaces.ts"
 
 const cityName = 'Heidelberg'
 const countryCode = 'DE'
