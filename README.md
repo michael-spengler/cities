@@ -29,8 +29,8 @@ console.log(`\nThe closest city to this place is: \n${JSON.stringify(closestCity
 
 ## Test it via command line
 ```
-deno run --allow-net https://raw.githubusercontent.com/michael-spengler/food/master/test-it.ts
-<!-- deno run --allow-net https://deno.land/x/food/test-it.ts -->
+deno run https://raw.githubusercontent.com/michael-spengler/cities/master/test-it.ts
+<!-- deno run https://deno.land/x/cities/test-it.ts -->
 ```
 
 ## Contributions are welcome
