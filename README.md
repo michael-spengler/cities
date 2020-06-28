@@ -1,5 +1,7 @@
 # Cities Module
 
+Provides data about cities with a population of about 40000+ inhabitants.
+
 ## Usage example for your code
 
 ```
