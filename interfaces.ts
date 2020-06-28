@@ -8,8 +8,8 @@ export interface ICityInfo {
     adminCode: string,
     population: number,
     loc: ILoc,
-    muni: string,
-    muniSub: string
+    muni: string | undefined,
+    muniSub: string | undefined
 }
 
 export interface ILoc {

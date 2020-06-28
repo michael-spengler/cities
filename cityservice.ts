@@ -1,7 +1,7 @@
 // import { cities } from './cities.ts'
 import { DistanceCalculator } from "https://deno.land/x/distancecalculator/distance-calculator.ts"
 import { cities } from 'https://raw.githubusercontent.com/michael-spengler/cities/master/cities.ts'
-import { ICityInfo } from "./interfaces"
+// import { cities } from './cities.ts'
 // import { cities } from 'https://deno.land/x/cities/cities.ts'
 
 
@@ -9,7 +9,7 @@ export class CityService {
 
     private static minimumPopulation = 40000
 
-    public static getCityInfo(countryCode: string, cityName: string): ICityInfo {
+    public static getCityInfo(countryCode: string, cityName: string): any {
         return cities.filter((city) => city.country === countryCode && city.name === cityName)[0]
     }
 
