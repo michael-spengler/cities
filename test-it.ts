@@ -1,5 +1,5 @@
 import { CityService } from "https://raw.githubusercontent.com/michael-spengler/cities/master/cityservice.ts"
-import { ICityInfo } from "./interfaces"
+import { ICityInfo } from "./interfaces.ts"
 // import { CityService } from "https://deno.land/x/cities/cityservice.ts"
 
 const cityName = 'Heidelberg'
