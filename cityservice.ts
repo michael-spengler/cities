@@ -10,11 +10,38 @@ export class CityService {
 
     private static minimumPopulation = 40000
 
+
     public static getCityInfo(countryCode: string, cityName: string): ICityInfo {
         return cities.filter((city) => city.country === countryCode && city.name === cityName)[0]
     }
 
-    public static getClosestCity(latitude: number, longitude: number, minimumPopulation: number = CityService.minimumPopulation): any {
+
+    public static getCitiesByCountryCode(countryCode: string, minimumPopulation: number = CityService.minimumPopulation, maximumPopulation: number = 10000000000): ICityInfo[] { 
+
+        if (minimumPopulation < CityService.minimumPopulation) {
+            throw new Error(`This service includes only cities with at least ${CityService.minimumPopulation} inhabitants`)
+        }
+
+        return cities.filter((city) => city.country === countryCode && city.population >= minimumPopulation && city.population <= maximumPopulation)
+    }
+
+
+    public static getCitiesByPopulation(minimumPopulation: number, maximumPopulation: number = 10000000000): ICityInfo[] {
+
+        if (minimumPopulation < CityService.minimumPopulation) {
+            throw new Error(`This service includes only cities with at least ${CityService.minimumPopulation} inhabitants`)
+        }
+
+        return cities.filter((city) => city.population >= minimumPopulation && city.population <= maximumPopulation)
+    }
+
+
+    public static getClosestCity(latitude: number, longitude: number, minimumPopulation: number = CityService.minimumPopulation): ICityInfo {
+
+        if (minimumPopulation < CityService.minimumPopulation) {
+            throw new Error(`This service includes only cities with at least ${CityService.minimumPopulation} inhabitants`)
+        }
+
         let cityWithLowestDistance
         let lowestDistance = 10000000000
         for (const city of cities.filter((entry: any) => entry.population >= minimumPopulation)){
@@ -24,6 +51,7 @@ export class CityService {
                 cityWithLowestDistance = city
             }
         }
-        return cityWithLowestDistance
+        
+        return cityWithLowestDistance as ICityInfo
     }
 }
