@@ -15,7 +15,7 @@ const placeOnEarth = {
     longitude: 8.5412433
 }
 
-const minPop = 1000000
+const minPop = 70000
 const closestCity = CityService.getClosestCity(placeOnEarth.latitude, placeOnEarth.longitude, minPop)
 
-console.log(`\nThe closest city to this place is: \n${JSON.stringify(closestCity)}\n`)
+console.log(`\nThe closest city to this place with at least ${minPop} inhabitants is: \n${JSON.stringify(closestCity)}\n`)

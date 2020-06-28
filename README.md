@@ -8,6 +8,7 @@ Provides data about cities with a population of about 40000+ inhabitants.
 
 import { CityService } from "https://raw.githubusercontent.com/michael-spengler/cities/master/cityservice.ts"
 // import { CityService } from "https://deno.land/x/cities/cityservice.ts"
+// import { CityService } from "./cityservice.ts"
 
 const cityName = 'Heidelberg'
 const countryCode = 'DE'
@@ -22,9 +23,10 @@ const placeOnEarth = {
     longitude: 8.5412433
 }
 
-const closestCity = CityService.getClosestCity(placeOnEarth.latitude, placeOnEarth.longitude)
+const minPop = 70000
+const closestCity = CityService.getClosestCity(placeOnEarth.latitude, placeOnEarth.longitude, minPop)
 
-console.log(`\nThe closest city to this place is: \n${JSON.stringify(closestCity)}\n`)
+console.log(`\nThe closest city to this place with at least ${minPop} inhabitants is: \n${JSON.stringify(closestCity)}\n`)
 
 
 ```
