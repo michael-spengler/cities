@@ -1,6 +1,7 @@
 # Cities Module
 
 Provides data about cities with a population of about 40000+ inhabitants.
+Including smaller Cities soon. Performance Trade Of? Feedback = welcome
 
 ## Usage example for your code
 
