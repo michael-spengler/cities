@@ -10,7 +10,7 @@ export class CityService {
 
 
     public static getCityInfo(countryCode: string, cityName: string): ICityInfo {
-        return cities.filter((city) => city.country === countryCode && city.name === cityName)[0]
+        return cities.filter((city) => city.country === countryCode && city.name.toLowerCase() === cityName.toLowerCase())[0]
     }
 
 
@@ -20,7 +20,7 @@ export class CityService {
             throw new Error(`This service includes only cities with at least ${CityService.minimumPopulation} inhabitants`)
         }
 
-        return cities.filter((city) => city.country === countryCode && city.population >= minimumPopulation && city.population <= maximumPopulation)
+        return cities.filter((city) => city.country.toLowerCase() === countryCode.toLowerCase() && city.population >= minimumPopulation && city.population <= maximumPopulation)
     }
 
 
