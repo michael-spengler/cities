@@ -1,0 +1,1 @@
+deno run query-examples/get-cities-by-country-code-and-population.ts "UA" 1000000

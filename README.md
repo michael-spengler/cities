@@ -40,9 +40,15 @@ console.log(`\nThe closest city to this place with at least ${minInhabitants} in
 
 ## Test it via command line
 ```
-deno run https://raw.githubusercontent.com/michael-spengler/cities/master/test-it.ts
-<!-- deno run https://deno.land/x/cities/test-it.ts -->
+deno run https://deno.land/x/cities/test-it.ts
 ```
 
 ## Contributions are welcome
 Feel free to create a pull request if you would like to improve things.
+  
+
+## Support my Open Source Contributions  
+
+If you like my work please consider downloading the brave browser via my promotion link: [https://brave.com/fan464](https://brave.com/fan464).  
+
+![![](https://brave.com/)](https://brave.com/wp-content/uploads/2019/01/logotype-full-color.svg)
